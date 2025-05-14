@@ -1,0 +1,6 @@
+function playVideo(source) {
+    const video = document.getElementById('videoPlayer');
+    video.src = source;
+    video.load();
+    video.play();
+  }

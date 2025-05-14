@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crashtest</title>
+    <link rel="stylesheet" href="css/crashtest.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,6 +12,20 @@
     <header>
         <div class="vertical-text">CRASHTEST</div>
     </header>
+    
+    <main>
+        <div class="container">
+            <video id="videoPlayer" controls>
+              <source src="video/animatic.mp4" type="video/mp4">
+            </video>
+        
+            <div class="button-group">
+              <button onclick="playVideo('animatic.mp4')">Mand og kvinde</button>
+              <button onclick="playVideo('animaticmand.mp4')">To mænd</button>
+            </div>
+          </div>
+    </main>
+
     <footer>
         <section class="bottom-icons">
             <button class="icon-button">
@@ -24,5 +39,6 @@
             </button>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
