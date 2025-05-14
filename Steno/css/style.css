@@ -1,0 +1,141 @@
+:root{
+    --grå: #2c2c2c;
+    --orange: #d7811f;
+    --green: #005835;
+    --blaa: #003d85;
+    --rod: #ca020c;
+}
+
+@font-face {
+    font-family:'Passata';
+    src: url('fonts/AUPassata_Light.ttf') format('truetype'); /* eller .otf, .woff osv. */
+
+    font-style: normal;
+  }
+
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+  
+    body {
+        font-family: 'Passata', sans-serif;
+        background-color: var(--grå);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;    
+    }
+    .road {
+        max-width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .logo {
+        position: absolute;
+        top: 4%; 
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 175px; 
+        height: auto;
+    }
+    .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 1.8rem;
+        color: #a0a0a0;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 2%;
+        transform: translateY(-50%);
+        letter-spacing: 0.2em;
+        padding: 1rem;
+        writing-mode: vertical-rl; 
+        transform: rotate(180deg);
+      }
+    
+    .bottom-icons {
+        position: fixed;
+        bottom: 20px;
+        left: 11%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        z-index: 1000;
+      }
+      
+      .icon-button {
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      .icon-button img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+
+      .container {
+        display: flex;
+        gap: 4rem;
+        justify-content: center; /* Centrerer indholdet horisontalt */
+        align-items: center; /* Centrerer indholdet vertikalt */
+        height: 100vh; /* Gør containeren højde lig med hele vinduets højde */
+      }
+
+      .container p{
+        font-size: 2.5rem;
+      }
+
+      .card {
+        width: 350px;
+        height: 520px;
+        border-radius: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+      }
+      
+      .card:hover {
+        transform: scale(1.05);
+      }
+      
+      .card-content {
+        padding: 1rem;
+      }
+      
+      /* Farver som i dit billede */
+      .crash {
+        background-color: #c9362d;
+      }
+      
+      .quiz {
+        background-color: #d38a2d;
+        background-image: url(../billeder/pære.webp);
+        background-size: 75%;
+        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-position-x: center;
+        background-position-y: 65%;
+      }
+      
+      .info {
+        background-color: #2e428f;
+      }
+}
+
+
