@@ -20,6 +20,14 @@
   font-style: normal;
 }
 
+  @font-face {
+    font-family:'PassataRg';
+    src: url(../fonts/AUPassata_Rg.ttf) format('truetype'); /* eller .otf, .woff osv. */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
   
     body {
@@ -58,6 +66,8 @@
         padding: 1rem;
         writing-mode: vertical-rl; 
         transform: rotate(180deg);
+        opacity: 75%;
+        margin-left: 1.5rem;
       }
     
     .bottom-icons {

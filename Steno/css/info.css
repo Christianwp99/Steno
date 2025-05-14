@@ -1,0 +1,83 @@
+:root{
+    --grå: #2c2c2c;
+    --orange: #d7811f;
+    --green: #005835;
+    --blaa: #003d85;
+    --rod: #ca020c;
+}
+
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+   
+    .top-box {
+        background-color: #e5e5e5;
+        padding: 1rem; 
+        padding-left: 5rem;
+        border-radius: 1rem;
+        max-width: 50rem; 
+        margin-left: 6rem;
+        margin-top: 5rem;
+      }
+
+
+      
+      .top-box h1 {
+        font-size: 2rem;
+        color: #1a1a1a;
+        margin: 0;
+        font-weight: bold;
+      }
+      
+      .top-box p {
+        font-family: 'PassataRg', sans-serif;
+        font-size: 2rem;
+        color: #333;
+      }
+      
+      .infocontainer {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        margin-right: 5rem;
+      }
+      
+      .info-kort {
+        width: 10rem;
+        height: 14rem;
+        border-radius: 0.625rem;
+        color: white;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .info-kort .hand {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .blaa {
+        background-color: #003f8a;
+      }
+      
+      .graa {
+        background-color: #d7d7d7;
+        color: #1a1a1a;
+      }
+      
+      .orange {
+        background-color: #d87b1e;
+      }
+      
+      .gron {
+        background-color: #1c5031;
+      }
+      
+}
