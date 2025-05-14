@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forside</title>
+    <title>Crashtest</title>
+    <link rel="stylesheet" href="css/crashtest.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <img src="billeder/road.webp" alt="" class="road">
     <header>
-        <div class="vertical-text">FORSIDE</div>
-        <img src="billeder/sciencemuseeerne-nyt-logo-hvid.webp" alt="" class="logo">
+        <div class="vertical-text">CRASHTEST</div>
     </header>
-    <main>
-            <div class="container">
-              <div class="card crash" onclick="location.href='crashtest.html'">
-                <div class="card-content">
-                  <p>CRASH<br>TEST</p>
-                </div>
-              </div>
-              <div class="card quiz" onclick="location.href='quiz.html'">
-                <div class="card-content">
-                  <p>QUIZ</p>
-                </div>
-              </div>
-              <div class="card info" onclick="location.href='info.html'">
-                <div class="card-content">
-                  <p>VIDSTE<br>DU AT</p>
-                </div>
-              </div>
-            </div>
-            
-    </main>
     
+    <main>
+        <div class="container">
+            <video id="videoPlayer" controls>
+              <source src="video/animatic.mp4" type="video/mp4">
+            </video>
+        
+            <div class="button-group">
+              <button onclick="playVideo('animatic.mp4')">Kvinde</button>
+              <button onclick="playVideo('animaticmand.mp4')">Mand</button>
+            </div>
+          </div>
+    </main>
+
     <footer>
         <section class="bottom-icons">
             <button class="icon-button">
@@ -46,5 +39,6 @@
             </button>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+      .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      video {
+        width: 90vw;
+        max-width: 1300px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      
+      .button-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      
+      button {
+        padding: 20px 40px;
+        font-size: 34px;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: var(--orange);
+      }
+      
+}

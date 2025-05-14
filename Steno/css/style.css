@@ -57,6 +57,8 @@
         padding: 1rem;
         writing-mode: vertical-rl; 
         transform: rotate(180deg);
+        opacity: 75%;
+        margin-left: 1.5rem;
       }
     
     .bottom-icons {
@@ -127,20 +129,30 @@
       
       /* Farver som i dit billede */
       .crash {
-        background-color: #c9362d;
+        background-color: var(--rod);
+        background-image: url(../billeder/crash.webp);
+        background-size: 75%;
+        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-position-x: center;
+        background-position-y: 35%;
       }
       
       .quiz {
-        background-color: #d38a2d;
+        background-color: var(--orange);
         background-image: url(../billeder/pære.webp);
         background-size: 75%;
         background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
         background-position-x: center;
-        background-position-y: 65%;
+        background-position-y: 60%;
       }
       
       .info {
-        background-color: #2e428f;
+        background-color: var(--blaa);
+        background-image: url(../billeder/sporg.webp);
+        background-size: 45%;
+        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-position-x: center;
+        background-position-y: center;
       }
 
 
