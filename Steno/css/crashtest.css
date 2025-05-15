@@ -9,7 +9,8 @@
         width: 90vw;
         max-width: 1200px;
         border-radius: 10px;
-        margin-bottom: 80px;
+        margin-bottom: -50px;
+        margin-top: 250px;
       }
       
       .button-group {
@@ -17,12 +18,17 @@
         justify-content: space-between;
         align-items: center;
         width: 90%; /* eller max-width fx 1200px */
-        margin: 0 auto;
+        max-width: 1200px;
+        margin-bottom: 25%;
       }
 
       .left-buttons {
         display: flex;
         gap: 20px;
+        justify-content: center;
+        flex: 1;
+        margin-left: 20%;
+        margin-bottom: 20px;
       }
       
       .button {
@@ -37,10 +43,11 @@
         cursor: pointer;
         transition: 0.3s;
         background-color: var(--orange);
-        margin-top: -15%;
+
       }
       .replay {
-        margin-left: auto;
+        height: 120px;
       }
+
       
 }
