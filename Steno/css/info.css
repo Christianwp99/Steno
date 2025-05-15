@@ -13,7 +13,7 @@
         padding: 1rem; 
         padding-left: 5rem;
         border-radius: 1rem;
-        max-width: 50rem; 
+        max-width: 55rem; 
         margin-left: 6rem;
         margin-top: 5rem;
       }
@@ -40,18 +40,19 @@
         flex-wrap: wrap;
         margin-top: 2rem;
         margin-right: 5rem;
+        margin-left: 2rem;
       }
       
       .info-kort {
-        width: 10rem;
-        height: 14rem;
+        width: 12rem;
+        height: 18rem;
         border-radius: 0.625rem;
         color: white;
         text-align: center;
         padding: 1.5rem 1rem;
         font-family: Arial, sans-serif;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
