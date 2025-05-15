@@ -43,3 +43,45 @@ body {
   left: 0; /* eller et andet udgangspunkt */
   z-index: 2;
 }
+
+
+/* Quiz container og layout */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.question-box {
+  background-color: #1f4499;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 3rem;
+  height: 10rem;
+  width: 80rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.answer {
+  background-color: #e0861b;
+  color: white;
+  font-size: 4rem;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  width: 40rem;
+  height: 10rem;
+  text-align: center;
+}
