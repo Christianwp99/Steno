@@ -43,28 +43,3 @@ body {
   left: 0; /* eller et andet udgangspunkt */
   z-index: 2;
 }
-
-
-/* Footer */
-footer {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.bottom-icons {
-  display: flex;
-  gap: 20px;
-}
-
-.icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.icon-button img {
-  width: 40px;
-}
