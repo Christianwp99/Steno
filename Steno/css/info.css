@@ -133,7 +133,7 @@
       }
 
       .back img {
-        width: 80%;         /* Skaler bredden ned til 60% af kortet */
+        width: 70%;         /* Skaler bredden ned til 60% af kortet */
         height: auto;       /* Bevar billedets proportioner */
         object-fit: contain; /* Sørger for, at det ikke bliver strukket */
       }
