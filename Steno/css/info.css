@@ -9,17 +9,17 @@
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
    
     .top-box {
-        background-color: #e5e5e5;
+        background-color: #D9D9D9;
         padding: 1rem; 
         padding-left: 5rem;
         border-radius: 1rem;
         max-width: 55rem; 
         margin-left: 6rem;
         margin-top: 5rem;
+        box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed */
+
       }
 
-
-      
       .top-box h1 {
         font-size: 2rem;
         color: #1a1a1a;
@@ -44,41 +44,85 @@
       }
       
       .info-kort {
-        width: 12rem;
-        height: 18rem;
+        width: 10rem;
+        height: 13rem;
         border-radius: 0.625rem;
         color: white;
         text-align: center;
         padding: 1.5rem 1rem;
         font-family: Arial, sans-serif;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
+        background-image: url(../billeder/hand.webp);
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
       }
       
-      .info-kort .hand {
-        font-size: 2.5rem;
-        margin-bottom: 0.75rem;
-      }
+  
       
       .blaa {
         background-color: #003f8a;
+        box-shadow: -0.5rem 0 rgba(0, 63, 138, 0.5); /* 50% opacity */
       }
       
       .graa {
-        background-color: #d7d7d7;
+        background-color: #D9D9D9;
         color: #1a1a1a;
+        box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed */
       }
       
       .orange {
         background-color: #d87b1e;
+        box-shadow: -0.5rem 0 rgba(216, 123, 30, 0.5);
       }
       
       .gron {
         background-color: #1c5031;
+        box-shadow: -0.5rem 0 rgba(28, 80, 49, 0.5);
+
       }
+      
+      .infocontainer2{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 1.5rem;
+      }
+
+      .box{
+        font-size: 1.2rem;
+        background-color: #D9D9D9;
+        width: 30rem;
+        height: 6rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .graf{
+        background-color: #D9D9D9;
+        text-decoration: underline;
+        border-radius: 100%;
+        padding: 4rem;
+      }
+
+  
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 1rem;
+          text-align: center;
+        }
+        
       
 }
