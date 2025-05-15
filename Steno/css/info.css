@@ -20,8 +20,6 @@
 
       }
 
-
-      
       .top-box h1 {
         font-size: 2rem;
         color: #1a1a1a;
@@ -59,6 +57,10 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        background-image: url(../billeder/hand.webp);
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
       }
       
   
