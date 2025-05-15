@@ -23,16 +23,26 @@ body {
   z-index: -1;
 }
 
-.progressbar{
-  display: block;
+.progress-wrapper {
   width: 60%;
-  height: auto;
-  margin: 20px auto 0 auto; 
+  margin: 20px auto 0 auto;
   position: relative;
   z-index: 1;
 }
 
+.progressbar {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+.bil {
+  width: 15%;
+  position: absolute;
+  top: -20px; /* justér så bilen står ovenpå progressbaren */
+  left: 0; /* eller et andet udgangspunkt */
+  z-index: 2;
+}
 
 
 /* Footer */
