@@ -37,7 +37,7 @@
 }
 
 .question-box {
-  background-color: #1f4499;
+  background-color: var(--blaa);
   padding: 20px 30px;
   border-radius: 10px;
   text-align: center;
@@ -55,7 +55,7 @@
 }
 
 .answer {
-  background-color: #e0861b;
+  background-color: var(--orange);
   color: white;
   font-size: 4rem;
   border: none;
@@ -67,4 +67,18 @@
   text-align: center;
 }
 
+.next-button {
+  background-color: var(--orange);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 40px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  margin-top: 40px;
+  align-self: flex-end;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+}
 
