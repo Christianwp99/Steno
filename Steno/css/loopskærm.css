@@ -58,4 +58,9 @@ body, html {
     top: 855px;
 }
 
+.tekst {
+    z-index: 500;
+    margin-top: 700px;
+}
+
 }
