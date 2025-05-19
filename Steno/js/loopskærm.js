@@ -24,7 +24,19 @@ function animateScroll() {
     element.style.transform = `translateX(${offset[lag]}px)`;
   }
 
+
   requestAnimationFrame(animateScroll);
 }
 
 animateScroll();
+
+let angle = 0;
+
+function animateBil() {
+  angle += 0.01;
+  const bil = document.querySelector(".bil");
+  bil.style.transform = `translate(-50%, 0) translateX(${Math.sin(angle) * 15}px)`;
+
+  requestAnimationFrame(animateBil);
+}
+animateBil();
