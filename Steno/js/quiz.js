@@ -62,25 +62,41 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showFeedback(feedbackText) {
+    // Opdaterer tekstindholdet i spørgsmålskassen med feedback
     questionBox.textContent = feedbackText;
-    questionBox.style.fontSize = "2.4rem";
+    questionBox.style.fontSize = "2.4rem"; // Gør teksten større
+  
+    // Erstatter svarcontainerens indhold med en ny 'næste'-knap
     answerContainer.innerHTML = `<button class="next-button"></button>`;
-
+  
+    // Vælger den netop indsatte knap og bilen
     const nextButton = document.querySelector(".next-button");
-
+    const bil = document.querySelector(".bil");
+  
+    // Funktion der beregner og opdaterer bilens position ud fra fremdrift i quizzen
+    function updateBilPosition() {
+      const procent = (currentQuestion / (quizData.length - 1)) * 75; // Procentvis fremdrift
+      bil.style.left = `${procent}%`; // Flytter bilen til ny position
+    }
+  
+    // Hvis vi er ved det sidste spørgsmål
     if (currentQuestion === quizData.length - 1) {
-      nextButton.textContent = "Færdig";
+      nextButton.textContent = "Færdig"; // Skift knaptekst
       nextButton.addEventListener("click", () => {
+        // Naviger til slutside
         window.location.href = "quizslut.html";
       });
     } else {
-      nextButton.textContent = "Næste →";
+      // Hvis der stadig er flere spørgsmål tilbage
+      nextButton.textContent = "Næste →"; // Skift knaptekst
       nextButton.addEventListener("click", () => {
-        currentQuestion++;
-        loadQuestion(currentQuestion);
+        currentQuestion++; // Gå videre til næste spørgsmål
+        loadQuestion(currentQuestion); // Indlæs næste spørgsmål
+        updateBilPosition(); // Opdater bilens position
       });
     }
   }
+  
 
   loadQuestion(currentQuestion);
 });
