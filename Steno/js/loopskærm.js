@@ -3,7 +3,8 @@ let offset = {
   himmel: 0,
   bjerg: 0,
   træ: 0,
-  busk: 0
+  busk: 0,
+  vej: 0
 };
 
 // Hastighed (jo højere tal, jo hurtigere)
@@ -11,31 +12,42 @@ const speed = {
   himmel: 0.1,
   bjerg: 0.3,
   træ: 0.6,
-  busk: 1
+  busk: 1,
+  vej: 2
 };
 
-function animateScroll() {
-  for (let lag in offset) {
-    offset[lag] -= speed[lag];
-    if (offset[lag] <= -window.innerWidth) {
-      offset[lag] = 0;
-    }
-    const element = document.querySelector(`.${lag}`);
-    element.style.transform = `translateX(${offset[lag]}px)`;
-  }
+let lastTime = 0;
+const delay = 8; // juster for hastighed
 
+function animateScroll(timestamp) {
+  if (timestamp - lastTime >= delay) {
+    for (let lag in offset) {
+      offset[lag] -= speed[lag];
+
+      const element = document.querySelector(`.${lag}`);
+      const width = element.offsetWidth;
+
+      if (offset[lag] <= -width) {
+        offset[lag] = 0;
+      }
+
+      element.style.transform = `translateX(${offset[lag]}px)`;
+    }
+
+    lastTime = timestamp;
+  }
 
   requestAnimationFrame(animateScroll);
 }
 
-animateScroll();
+requestAnimationFrame(animateScroll);
 
 let angle = 0;
 
 function animateBil() {
   angle += 0.01;
   const bil = document.querySelector(".bil");
-  bil.style.transform = `translate(-50%, 0) translateX(${Math.sin(angle) * 15}px)`;
+  bil.style.transform = `translate(-50%, 0) translateX(${Math.sin(angle) * 30}px)`;
 
   requestAnimationFrame(animateBil);
 }

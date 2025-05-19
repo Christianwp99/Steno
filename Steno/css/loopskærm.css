@@ -24,22 +24,26 @@ body, html {
   position: absolute;
 }
 
+.himmel {
+    width: 400%;
+}
+
 .græs {
     top: 350px;
 }
 
 .bjerg {
-    width: 35%;
-    top: 200px;
+    width: 300%;
+    top: 230px;
 }
 
 .træ {
-    width: 15%;
+    width: 300%;
     top: 350px;
 }
 
 .vej {
-    width: 100%;
+    width: 400%;
     top: 548px;
 }
 
@@ -54,7 +58,7 @@ body, html {
 }
 
 .busk {
-    width: 25%;
+    width: 300%;
     top: 855px;
 }
 
