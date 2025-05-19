@@ -49,8 +49,10 @@
   height: 10rem;
   width: 70rem;
   margin-bottom: 30px;
-  text-align: center;
+  transition: height 0.3s ease;
+  align-content: center;
 }
+
 
 .answer-buttons {
   display: grid;
@@ -77,7 +79,7 @@
   background-color: var(--orange);
   border: none;
   border-radius: 12px;
-  padding: 15px 40px;
+  padding: 1rem 3rem;
   cursor: pointer;
   width: auto;
   height: auto;
