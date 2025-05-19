@@ -40,3 +40,8 @@ function animateBil() {
   requestAnimationFrame(animateBil);
 }
 animateBil();
+
+// Gå til forside.html ved klik
+document.getElementById("pauseskærm").addEventListener("click", function() {
+  window.location.href = "forside.html";
+});
