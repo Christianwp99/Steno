@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       question: "Har kvinder større risiko for skader i samme type ulykke som mænd?",
       answers: ["Ja, kvinder har større risiko", "Nej, kvinder er mere sikre", "Det afhænger af bilen"],
       correct: "Ja, kvinder har større risiko",
-      feedback: "Studier viser, at kvinder har 47% større risiko for alvorlige skader i bilulykker, især frontalsammenstød"
+      feedback: "Studier viser, at kvinder har 47% større risiko for alvorlige skader i bilulykker, især frontalsammenstød."
     },
     {
       question: "Er sikkerhedsseler i biler designet, så de passer optimalt til kvinders kroppe?",
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const q = quizData[index];
     questionBox.textContent = q.question;
     questionBox.style.fontSize = "3rem";
-
     answerContainer.innerHTML = "";
 
     q.answers.forEach(answerText => {
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const allButtons = document.querySelectorAll(".answer");
     allButtons.forEach(b => b.disabled = true);
 
-    if (button.textContent.trim() === correctAnswer) {
+    if (button.textContent.trim() === correctAnswer.trim()) {
       button.style.backgroundColor = "#006b3c"; // grøn
     } else {
       button.style.backgroundColor = "#b31919"; // rød
@@ -65,22 +64,23 @@ document.addEventListener("DOMContentLoaded", () => {
   function showFeedback(feedbackText) {
     questionBox.textContent = feedbackText;
     questionBox.style.fontSize = "2.4rem";
+    answerContainer.innerHTML = `<button class="next-button"></button>`;
 
-    answerContainer.innerHTML = `
-      <button class="next-button">Næste →</button>
-    `;
+    const nextButton = document.querySelector(".next-button");
 
-    document.querySelector(".next-button").addEventListener("click", () => {
-      currentQuestion++;
-      if (currentQuestion < quizData.length) {
-        loadQuestion(currentQuestion);
-      } else {
-        // Send brugeren til slutskærm
+    if (currentQuestion === quizData.length - 1) {
+      nextButton.textContent = "Færdig";
+      nextButton.addEventListener("click", () => {
         window.location.href = "quizslut.html";
-      }
-    });
+      });
+    } else {
+      nextButton.textContent = "Næste →";
+      nextButton.addEventListener("click", () => {
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+      });
+    }
   }
 
-  // Start første spørgsmål
   loadQuestion(currentQuestion);
 });

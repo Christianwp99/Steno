@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
     allButtons.forEach(b => b.disabled = true);
 
     if (button.textContent.trim() === correctAnswer.trim()) {
-      button.style.backgroundColor = "#006b3c";
+      button.style.backgroundColor = "#006b3c"; // grøn
     } else {
-      button.style.backgroundColor = "#b31919";
+      button.style.backgroundColor = "#b31919"; // rød
     }
 
     setTimeout(() => {
@@ -78,17 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
   function showFeedback(feedbackText) {
     questionBox.textContent = feedbackText;
     questionBox.style.fontSize = "2rem";
-    answerContainer.innerHTML = `<button class="next-button">Næste →</button>`;
 
-    document.querySelector(".next-button").addEventListener("click", () => {
-      currentQuestion++;
-      if (currentQuestion < quizData.length) {
-        loadQuestion(currentQuestion);
-      } else {
-        // Gå til slut-side
+    answerContainer.innerHTML = `<button class="next-button"></button>`;
+
+    const nextButton = document.querySelector(".next-button");
+
+    if (currentQuestion === quizData.length - 1) {
+      nextButton.textContent = "Færdig";
+      nextButton.addEventListener("click", () => {
         window.location.href = "quizslut.html";
-      }
-    });
+      });
+    } else {
+      nextButton.textContent = "Næste →";
+      nextButton.addEventListener("click", () => {
+        currentQuestion++;
+        loadQuestion(currentQuestion);
+      });
+    }
   }
 
   loadQuestion(currentQuestion);
