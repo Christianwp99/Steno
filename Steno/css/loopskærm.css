@@ -28,4 +28,19 @@ body, html {
     top: 350px;
 }
 
+.bjerg {
+    width: 35%;
+    top: 200px;
+}
+
+.træ {
+    width: 15%;
+    top: 350px;
+}
+
+.vej {
+    width: 100%;
+    top: 548px;
+}
+
 }
