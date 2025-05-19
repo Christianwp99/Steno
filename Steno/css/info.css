@@ -66,7 +66,7 @@
       
       .blaa {
         background-color: #003f8a;
-        box-shadow: -0.5rem 0 rgba(0, 63, 138, 0.5); /* 50% opacity */
+        box-shadow: -0.5rem 0 rgba(0, 63, 138, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
 
       
@@ -74,17 +74,17 @@
       .graa {
         background-color: #D9D9D9;
         color: #1a1a1a;
-        box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed */
+        box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
       
       .orange {
         background-color: #d87b1e;
-        box-shadow: -0.5rem 0 rgba(216, 123, 30, 0.5);
+        box-shadow: -0.5rem 0 rgba(216, 123, 30, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
       
       .gron {
         background-color: #1c5031;
-        box-shadow: -0.5rem 0 rgba(28, 80, 49, 0.5);
+        box-shadow: -0.5rem 0 rgba(28, 80, 49, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
         padding-right: 1.5rem;
       }
       
@@ -98,13 +98,14 @@
         position: relative;
         width: 100%;
         height: 100%;
-        transition: transform 0.6s; /*vend kortene*/
+        transition: transform 1s; /*vend kortene*/
         transform-style: preserve-3d; /*vend kortene*/
       }
       
       .flip-container.flipped .flipper {
         transform: rotateY(180deg); /*vend kortene*/
       }
+
       
       .front, .back {
         position: absolute;
@@ -132,7 +133,7 @@
       }
 
       .back img {
-        width: 70%;         /* Skaler bredden ned til 60% af kortet */
+        width: 70%;         /* Skaler bredden ned til 70% af kortet */
         height: auto;       /* Bevar billedets proportioner */
         object-fit: contain; /* Sørger for, at det ikke bliver strukket */
       }
@@ -182,54 +183,42 @@
         width: 12rem;
         height: 12rem;
         background-color: #D9D9D9;
+        box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-        overflow: hidden;
         position: relative;
+        text-decoration: underline;
       }
       
       .graf.rotating {
-        animation: rotate 1s ease forwards;
+        animation: rotate 1s ease forwards; /* Animationen varer 1 sekund */
       }
       
       @keyframes rotate {
         0% {
-          transform: rotate(0deg);
+          transform: rotate(0deg); /* Start rotation fra 0 grader */
         }
         100% {
-          transform: rotate(360deg);
+          transform: rotate(360deg); /* Slut rotation ved 360 grader */
         }
       }
       
       .graf img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
+        width: 100%; /* Billedet fylder hele bredden af containeren */
+        height: 100%; /* Billedet fylder hele højden af containeren */
+        object-fit: cover; /* Billedet skaleres og beskæres så det dækker hele containeren */
         position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.5s ease;
+        opacity: 0%; /* Usynligt som standard */
+        transition: opacity 0.5s ease; /* Blød overgang ved ændring af opacitet */
       }
       
       .graf.aktiv img {
-        opacity: 1;
+        opacity: 100%; /* Gør billedet synligt, når .aktiv er sat på containeren */
       }
-      
-  
-        footer {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          padding: 1rem;
-          text-align: center;
-        }
+
         
       
 }
