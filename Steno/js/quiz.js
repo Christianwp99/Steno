@@ -2,34 +2,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const questionBox = document.querySelector(".question-box");
   const answerContainer = document.querySelector(".answer-buttons");
 
- const quizData = [
-  {
-    question: "Findes der både crash-test dummies, som er designet efter mænd og efter kvinder?",
-    answers: ["Ja", "Nej"],
-    correct: "Nej",
-    feedback: "De fleste crashtestdummies er stadig modelleret efter en gennemsnitlig mand, hvilket giver skæv sikkerhedsvurdering."
-  },
-  {
-    question: "Har kvinder større risiko for skader i samme type ulykke som mænd?",
-    answers: ["Ja, kvinder har større risiko", "Nej, kvinder er mere sikre", "Det afhænger af bilen"],
-    correct: "Ja, kvinder har større risiko",
-    feedback: "Studier viser, at kvinder har 47% større risiko for alvorlige skader i bilulykker, især frontalsammenstød"
-  },
-  {
-    question: "Er sikkerhedsseler i biler designet, så de passer optimalt til kvinders kroppe?",
-    answers: ["Ja, de er tilpasset alle kropstyper", "Det afhænger af bilens størrelse", "Nej, de er primært designet ud fra mandlige mål"],
-    correct: "Nej, de er primært designet ud fra mandlige mål",
-    feedback: "Sikkerhedsseler er oftest konstrueret ud fra mandens anatomi og siddeposition. Det kan give dårlig pasform for kvinder – især over brystet, ved hofterne og under graviditet."
-  },
-  {
-    question: "Betyder det noget for sikkerheden, at kvinder i gennemsnit vejer mindre end mænd?",
-    answers: ["Nej, bilen beskytter alle lige godt", "Det handler mest om hastighed", "Ja, lavere vægt øger risikoen ved sammenstød"],
-    correct: "Ja, lavere vægt øger risikoen ved sammenstød",
-    feedback: "Lavere kropsvægt gør kroppen mere sårbar ved kollisioner – især når sikkerhedsudstyr ikke er tilpasset kvinders fysik. Det er en medvirkende årsag til, at kvinder har større risiko for alvorlige skader."
-  }
-];
-
-    // Tilføj flere spørgsmål her
+  const quizData = [
+    {
+      question: "Findes der både crash-test dummies, som er designet efter mænd og efter kvinder?",
+      answers: ["Ja", "Nej"],
+      correct: "Nej",
+      feedback: "De fleste crashtestdummies er stadig modelleret efter en gennemsnitlig mand, hvilket giver skæv sikkerhedsvurdering."
+    },
+    {
+      question: "Har kvinder større risiko for skader i samme type ulykke som mænd?",
+      answers: ["Ja, kvinder har større risiko", "Nej, kvinder er mere sikre", "Det afhænger af bilen"],
+      correct: "Ja, kvinder har større risiko",
+      feedback: "Studier viser, at kvinder har 47% større risiko for alvorlige skader i bilulykker, især frontalsammenstød"
+    },
+    {
+      question: "Er sikkerhedsseler i biler designet, så de passer optimalt til kvinders kroppe?",
+      answers: ["Ja, de er tilpasset alle kropstyper", "Det afhænger af bilens størrelse", "Nej, de er primært designet ud fra mandlige mål"],
+      correct: "Nej, de er primært designet ud fra mandlige mål",
+      feedback: "Sikkerhedsseler er oftest konstrueret ud fra mandens anatomi og siddeposition. Det kan give dårlig pasform for kvinder – især over brystet, ved hofterne og under graviditet."
+    },
+    {
+      question: "Betyder det noget for sikkerheden, at kvinder i gennemsnit vejer mindre end mænd?",
+      answers: ["Nej, bilen beskytter alle lige godt", "Det handler mest om hastighed", "Ja, lavere vægt øger risikoen ved sammenstød"],
+      correct: "Ja, lavere vægt øger risikoen ved sammenstød",
+      feedback: "Lavere kropsvægt gør kroppen mere sårbar ved kollisioner – især når sikkerhedsudstyr ikke er tilpasset kvinders fysik. Det er en medvirkende årsag til, at kvinder har større risiko for alvorlige skader."
+    }
+  ];
 
   let currentQuestion = 0;
 
@@ -77,15 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentQuestion < quizData.length) {
         loadQuestion(currentQuestion);
       } else {
-        endQuiz();
+        // Send brugeren til slutskærm
+        window.location.href = "quizslut.html";
       }
     });
-  }
-
-  function endQuiz() {
-    questionBox.textContent = "Tak for at gennemføre quizzen!";
-    questionBox.style.fontSize = "3rem";
-    answerContainer.innerHTML = "";
   }
 
   // Start første spørgsmål
