@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     questionBox.textContent = q.question;
     questionBox.style.fontSize = "3rem";
     answerContainer.innerHTML = "";
+    questionBox.style.height = "10rem";   // Gør højden standard
+    
 
     q.answers.forEach(answerText => {
       const btn = document.createElement("button");
@@ -65,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Opdaterer tekstindholdet i spørgsmålskassen med feedback
     questionBox.textContent = feedbackText;
     questionBox.style.fontSize = "2.4rem"; // Gør teksten større
+    questionBox.style.height = "30rem";   // Gør højden større (vælg en passende værdi)
   
     // Erstatter svarcontainerens indhold med en ny 'næste'-knap
     answerContainer.innerHTML = `<button class="next-button"></button>`;
@@ -82,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hvis vi er ved det sidste spørgsmål
     if (currentQuestion === quizData.length - 1) {
       nextButton.textContent = "Færdig"; // Skift knaptekst
+      nextButton.style.position = "relative";
+      nextButton.style.top = "-10rem";    // Flytter knappen op
+      nextButton.style.left = "37rem";    // Flytter knappen til højre
       nextButton.addEventListener("click", () => {
         // Naviger til slutside
         window.location.href = "quizslut.html";
@@ -89,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       // Hvis der stadig er flere spørgsmål tilbage
       nextButton.textContent = "Næste →"; // Skift knaptekst
+      nextButton.style.position = "relative";
+      nextButton.style.top = "-10rem";    // Flytter knappen op
+      nextButton.style.left = "37rem";    // Flytter knappen til højre
       nextButton.addEventListener("click", () => {
         currentQuestion++; // Gå videre til næste spørgsmål
         loadQuestion(currentQuestion); // Indlæs næste spørgsmål

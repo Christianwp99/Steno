@@ -48,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function loadQuestion(index) {
     const q = quizData[index];
     questionBox.textContent = q.question;
-    questionBox.style.fontSize = "2.5rem";
+    questionBox.style.fontSize = "2rem";
     answerContainer.innerHTML = "";
+    questionBox.style.height = "10rem";   // Gør højden standard
+    
 
     q.answers.forEach(answerText => {
       const btn = document.createElement("button");
@@ -72,30 +74,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       showFeedback(feedbackText);
-    }, 800);
+    }, 1000);
   }
 
   function showFeedback(feedbackText) {
+    // Opdaterer tekstindholdet i spørgsmålskassen med feedback
     questionBox.textContent = feedbackText;
-    questionBox.style.fontSize = "2rem";
-
+    questionBox.style.fontSize = "2.4rem"; // Gør teksten større
+    questionBox.style.height = "30rem";   // Gør højden større (vælg en passende værdi)
+  
+    // Erstatter svarcontainerens indhold med en ny 'næste'-knap
     answerContainer.innerHTML = `<button class="next-button"></button>`;
-
+  
+    // Vælger den netop indsatte knap og bilen
     const nextButton = document.querySelector(".next-button");
-
+    const bil = document.querySelector(".bil");
+  
+    // Funktion der beregner og opdaterer bilens position ud fra fremdrift i quizzen
+    function updateBilPosition() {
+      const procent = (currentQuestion / (quizData.length - 1)) * 75; // Procentvis fremdrift
+      bil.style.left = `${procent}%`; // Flytter bilen til ny position
+    }
+  
+    // Hvis vi er ved det sidste spørgsmål
     if (currentQuestion === quizData.length - 1) {
-      nextButton.textContent = "Færdig";
+      nextButton.textContent = "Færdig"; // Skift knaptekst
+      nextButton.style.position = "relative";
+      nextButton.style.top = "-10rem";    // Flytter knappen op
+      nextButton.style.left = "37rem";    // Flytter knappen til højre
       nextButton.addEventListener("click", () => {
+        // Naviger til slutside
         window.location.href = "quizslut.html";
       });
     } else {
-      nextButton.textContent = "Næste →";
+      // Hvis der stadig er flere spørgsmål tilbage
+      nextButton.textContent = "Næste →"; // Skift knaptekst
+      nextButton.style.position = "relative";
+      nextButton.style.top = "-10rem";    // Flytter knappen op
+      nextButton.style.left = "37rem";    // Flytter knappen til højre
       nextButton.addEventListener("click", () => {
-        currentQuestion++;
-        loadQuestion(currentQuestion);
+        currentQuestion++; // Gå videre til næste spørgsmål
+        loadQuestion(currentQuestion); // Indlæs næste spørgsmål
+        updateBilPosition(); // Opdater bilens position
       });
     }
   }
+  
 
   loadQuestion(currentQuestion);
 });

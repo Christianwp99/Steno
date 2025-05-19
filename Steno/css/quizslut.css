@@ -10,13 +10,13 @@
   padding: 2rem;
   border-radius: 16px;
   margin-bottom: 2rem;
-  max-width: 90%;
-  width: 100%;
+  width: 50rem;
+  justify-content: center;
 }
 
 .slut-billede {
   max-width: 100%;
-  height: auto;
+  height: 20rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
   object-fit: contain;
@@ -37,3 +37,8 @@
 .uvending-link img:hover {
   transform: scale(1.1) rotate(-8deg);
 }
+
+.bil {
+  margin-left: 34rem;
+}
+
