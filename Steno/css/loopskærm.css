@@ -32,19 +32,23 @@ body, html {
     top: 350px;
 }
 
-.bjerg {
-    width: 300%;
-    top: 230px;
-}
-
 .træ {
     width: 300%;
-    top: 350px;
+    top: 335px;
+}
+
+.vej-wrapper {
+  position: absolute;
+  top: 548px; /* samme top som din vej */
+  left: 0;
+  display: flex;
+  width: max-content;
+  height: 200px;
 }
 
 .vej {
-    width: 400%;
-    top: 548px;
+  width: 22768px; /* eller en anden bredde der passer præcist til skærmen */
+  height: 280px;
 }
 
 .bil {
@@ -63,8 +67,13 @@ body, html {
 }
 
 .tekst {
-    z-index: 500;
-    margin-top: 700px;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* eller en kontrastfarve, så teksten er synlig */
+  font-size: 4rem; /* tilpas størrelsen efter behov */
+  z-index: 1000; /* sikre den vises øverst */
+  text-align: center;
 }
-
 }
