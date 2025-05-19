@@ -1,0 +1,61 @@
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+/* Fjern scroll */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Baggrund */
+#pauseskærm {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Fælles for alle lag */
+.lag {
+  width: 100%;
+  height: auto;
+  left: 0;
+  transition: transform 0.3s ease-out;
+  position: absolute;
+}
+
+.græs {
+    top: 350px;
+}
+
+.bjerg {
+    width: 35%;
+    top: 200px;
+}
+
+.træ {
+    width: 15%;
+    top: 350px;
+}
+
+.vej {
+    width: 100%;
+    top: 548px;
+}
+
+.bil {
+    width: 50%;
+    top: 550px;
+    left: 690px;
+}
+
+.græs2 {
+    top: 826px;
+}
+
+.busk {
+    width: 25%;
+    top: 855px;
+}
+
+}

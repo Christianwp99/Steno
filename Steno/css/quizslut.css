@@ -1,0 +1,39 @@
+.quiz-slut {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.slut-card {
+  background-color: var(--green);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  width: 100%;
+}
+
+.slut-billede {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+
+.slut-tekst {
+  font-size: 1.4rem;
+  line-height: 1.6;
+   color: white;
+}
+
+.uvending-link img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.uvending-link img:hover {
+  transform: scale(1.1) rotate(-8deg);
+}

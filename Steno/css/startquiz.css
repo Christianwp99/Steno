@@ -83,3 +83,25 @@
   align-items: center;
 }
 
+.quiz-end-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.quiz-slut-billede {
+  max-width: 100%;
+  height: auto;
+}
+
+.quiz-afslut-tekst {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.uvending-billede {
+  width: 80px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
