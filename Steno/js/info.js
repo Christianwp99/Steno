@@ -1,8 +1,13 @@
+// Vælg alle elementer med klassen 'flip-container'
 document.querySelectorAll('.flip-container').forEach(container => {
-    container.addEventListener('click', () => {
-      container.classList.toggle('flipped');
-    });
+  
+  // Tilføj en klik-eventlistener til hvert element
+  container.addEventListener('click', () => {
+    
+    // Når der klikkes, tilføjes eller fjernes klassen 'flipped'
+    container.classList.toggle('flipped');
   });
+});
 
 // Find elementet med id="graf"
 document.getElementById("graf").addEventListener("click", function () {
@@ -29,5 +34,5 @@ document.getElementById("graf").addEventListener("click", function () {
       // Hvis ikke aktiv: vis tekst igen
       graf.innerHTML = '<h1>Klik her</h1>';
     }
-  }, 300); // Du kan justere tiden så det passer med din animation
+  }, 300); // Tiden kan justeres, så den passer med animationens varighed.
 });
