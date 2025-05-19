@@ -5,14 +5,14 @@ let offset = {
 };
 
 const speed = {
-  himmel: 0.1,
-  træ: 0.6,
+  himmel: 0.2,
+  træ: 0.4,
   busk: 1
 };
 
 // Animation med delay for jævnhed
 let lastTime = 0;
-const delay = 30; // cirka 60 FPS
+const delay = 16;
 
 function animateScroll(timestamp) {
   if (timestamp - lastTime >= delay) {
@@ -43,7 +43,7 @@ function animateScroll(timestamp) {
 
 // Vej-scroll setup
 let vejOffset = 0;
-const vejSpeed = 2;
+const vejSpeed = 1;
 const vejBilleder = document.querySelectorAll(".vej");
 
 requestAnimationFrame(animateScroll);
