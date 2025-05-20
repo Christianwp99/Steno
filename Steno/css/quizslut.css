@@ -1,3 +1,4 @@
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
 .quiz-slut {
   padding: 5rem 1rem;
   text-align: left;
@@ -57,3 +58,4 @@
   margin-left: 39rem;
 }
 
+}

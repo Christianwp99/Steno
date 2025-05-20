@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
 .container {
   text-align: center;
 }
@@ -75,3 +76,4 @@ h1 {
   height: 100vh;
 }
 
+}
