@@ -8,24 +8,32 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <img src="billeder/road.webp" alt="" class="road">
+
+  <!-- Baggrundsbillede -->
+  <img src="billeder/road.webp" alt="Baggrundsbillede af vej" class="road">
+
   <header>
     <div class="progress-wrapper">
-      <img src="/Steno/billeder/progressbar.png" alt="Progressbar" class="progressbar"/>
-      <img src="billeder/bil.webp" alt="bil" class="bil"/>
+      <img src="/Steno/billeder/progressbar.png" alt="Fremskridtslinje" class="progressbar">
+      <img src="billeder/bil.webp" alt="Bil ikon" class="bil">
     </div>
     <div class="vertical-text">QUIZ</div>
   </header>
-<main>
+
   <main class="quiz-container">
-    <div class="question-box"></div>
-    <div class="answer-buttons"></div>
+    <article class="question-box">
+      <!-- Spørgsmål indsættes her dynamisk -->
+    </article>
+
+    <section class="answer-buttons">
+      <!-- Svarmuligheder indsættes her dynamisk -->
+    </section>
   </main>
 
   <footer>
-    <section class="bottom-icons">
-      <button class="icon-button">
-        <img src="billeder/hjem.webp" alt="Hjem ikon" onclick="location.href='forside.html'">
+    <nav class="bottom-icons">
+      <button class="icon-button" onclick="location.href='forside.html'">
+        <img src="billeder/hjem.webp" alt="Hjem ikon">
       </button>
       <button class="icon-button">
         <img src="billeder/lyd.webp" alt="Lyd ikon">
@@ -33,7 +41,7 @@
       <button class="icon-button">
         <img src="billeder/dansk.webp" alt="Dansk ikon">
       </button>
-    </section>
+    </nav>
   </footer>
 
   <script src="js/quizmand.js"></script>

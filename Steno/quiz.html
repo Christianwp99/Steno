@@ -8,34 +8,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <img src="billeder/road.webp" alt="" class="road">
-  
+
+  <!-- Baggrund -->
+  <img src="billeder/road.webp" alt="Baggrundsbillede af vej" class="road">
+
   <header>
     <div class="vertical-text">QUIZ</div>
   </header>
 
-  <div class="quizcontainer">
-    <div class="title-wrapper">
+  <main class="quizcontainer">
+    <section class="title-wrapper">
       <h1>Vælg køn</h1>
-    </div>
+    </section>
 
- <div class="cards">
-  <div class="card-wrapper" onclick="location.href='startquiz.html'">
-    <div class="card1"></div>
-    <p class="card-label">Kvinde</p>
-  </div>
-  <div class="card-wrapper" onclick="location.href='startquizmand.html'">
-    <div class="card2"></div>
-    <p class="card-label">Mand</p>
-  </div>
-</div>
+    <section class="cards">
+      <article class="card-wrapper" onclick="location.href='startquiz.html'" role="button" tabindex="0">
+        <div class="card1" aria-hidden="true"></div>
+        <p class="card-label">Kvinde</p>
+      </article>
 
-
+      <article class="card-wrapper" onclick="location.href='startquizmand.html'" role="button" tabindex="0">
+        <div class="card2" aria-hidden="true"></div>
+        <p class="card-label">Mand</p>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    <section class="bottom-icons">
-      <button class="icon-button">
-        <img src="billeder/hjem.webp" alt="Hjem ikon" onclick="location.href='forside.html'">
+    <nav class="bottom-icons">
+      <button class="icon-button" onclick="location.href='forside.html'">
+        <img src="billeder/hjem.webp" alt="Hjem ikon">
       </button>
       <button class="icon-button">
         <img src="billeder/lyd.webp" alt="Lyd ikon">
@@ -43,8 +45,9 @@
       <button class="icon-button">
         <img src="billeder/dansk.webp" alt="Dansk ikon">
       </button>
-    </section>
+    </nav>
   </footer>
+
   <script src="js/quizslut.js"></script>
 </body>
 </html>

@@ -9,35 +9,36 @@
   <link rel="stylesheet" href="/Steno/css/style.css" />
 </head>
 <body>
-  <img src="billeder/road.webp" alt="" class="road">
+
+  <!-- Baggrundsbillede -->
+  <img src="billeder/road.webp" alt="Baggrundsbillede af vej" class="road">
 
   <header>
     <div class="vertical-text">QUIZ</div>
     <div class="progress-wrapper">
-      <img src="/Steno/billeder/progressbar.png" alt="Progressbar" class="progressbar"/>
-      <img src="billeder/bil.webp" alt="bil" class="bil"/>
+      <img src="/Steno/billeder/progressbar.png" alt="Fremskridtslinje" class="progressbar" />
+      <img src="billeder/bil.webp" alt="Bil ikon" class="bil" />
     </div>
   </header>
 
- <main class="quiz-slut">
-  <div class="slut-card">
-    <h1>Tak for din deltagelse!</h1>
-    <p class="slut-tekst">
-      Husk, din forståelse af trafiksikkerhed kan bidrage til en bedre fremtid for alle på vejene.
-    </p>
-    <div class="uvending">
-    <a href="forside.html" class="uvending-link" aria-label="Tilbage til start">
-      <img src="billeder/uvending.webp" alt="Tilbageknap" />
-    </a>
-  </div>
-  </div>
-</main>
-
+  <main class="quiz-slut">
+    <article class="slut-card">
+      <h1>Tak for din deltagelse!</h1>
+      <p class="slut-tekst">
+        Husk, din forståelse af trafiksikkerhed kan bidrage til en bedre fremtid for alle på vejene.
+      </p>
+      <div class="uvending">
+        <a href="forside.html" class="uvending-link">
+          <img src="billeder/uvending.webp" alt="Gå tilbage til start" />
+        </a>
+      </div>
+    </article>
+  </main>
 
   <footer>
-    <section class="bottom-icons">
-      <button class="icon-button">
-        <img src="billeder/hjem.webp" alt="Hjem ikon" onclick="location.href='forside.html'">
+    <nav class="bottom-icons">
+      <button class="icon-button" onclick="location.href='forside.html'">
+        <img src="billeder/hjem.webp" alt="Hjem ikon">
       </button>
       <button class="icon-button">
         <img src="billeder/lyd.webp" alt="Lyd ikon">
@@ -45,8 +46,9 @@
       <button class="icon-button">
         <img src="billeder/dansk.webp" alt="Dansk ikon">
       </button>
-    </section>
+    </nav>
   </footer>
+
   <script src="js/quizslut.js"></script>
 </body>
 </html>
