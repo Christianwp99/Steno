@@ -3,9 +3,9 @@ let inactivityTime = function () {
     let time;
     let timeoutInSeconds = 30; // Skift dette til det antal sekunder, du ønsker
 
-    // Funktion der omdirigerer til loopskærm.html
+    // Funktion der omdirigerer til index.html
     function redirectToLoopScreen() {
-      window.location.href = "loopskærm.html";
+      window.location.href = "index.html";
     }
 
     // Nulstil timeren ved interaktion
