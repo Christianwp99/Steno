@@ -1,13 +1,17 @@
+// Gemmer den aktuelle videokilde, så vi senere kan genafspille den samme video
 let currentVideoSource = '';
 
+// Afspiller en video baseret på det filnavn, der hentes via onClick knappen i HTML'en
+// Videoen indlæses og afspilles derefter
 function playVideo(source) {
   const video = document.getElementById('videoPlayer');
-  currentVideoSource = 'video/' + source; // Gem stien til aktuel video
+  currentVideoSource = 'video/' + source;
   video.src = currentVideoSource;
   video.load();
   video.play();
 }
 
+// Afspiller den sidst valgte video igen fra starten
 function replayVideo() {
   const video = document.getElementById('videoPlayer');
   if (currentVideoSource) {
@@ -20,7 +24,7 @@ function replayVideo() {
 // Tilbage til loopskærm
 let inactivityTime = function () {
     let time;
-    let timeoutInSeconds = 30; // Skift dette til det antal sekunder, du ønsker
+    let timeoutInSeconds = 30;
 
     // Funktion der omdirigerer til index.html
     function redirectToLoopScreen() {
@@ -36,7 +40,7 @@ let inactivityTime = function () {
     // Lyt efter brugerinteraktion
     window.onload = resetTimer;
     document.onmousemove = resetTimer;
-    document.ontouchstart = resetTimer; // For touch-skærme
+    document.ontouchstart = resetTimer;
     document.onclick = resetTimer;
   };
 

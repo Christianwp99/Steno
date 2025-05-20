@@ -4,18 +4,21 @@ let offset = {
   busk: 0
 };
 
+// Definerer scrollhastighed for de forskellige lag
 const speed = {
   himmel: 0.2,
   træ: 0.4,
   busk: 1
 };
 
-// Animation med delay for jævnhed
+// Animation med delay
 let lastTime = 0;
 const delay = 16;
 
 function animateScroll(timestamp) {
   if (timestamp - lastTime >= delay) {
+    // Opdaterer positionen for hvert lag baseret på dets hastighed
+    // Når et lag har scrollet hele sin bredde, nulstilles det for at skabe en uendelig loop-effekt
     for (let lag in offset) {
       offset[lag] -= speed[lag];
       const element = document.querySelector(`.${lag}`);
@@ -26,7 +29,7 @@ function animateScroll(timestamp) {
       element.style.transform = `translateX(${offset[lag]}px)`;
     }
 
-    // Vej-håndtering (separat fra offset-objektet)
+    // Håndterer animation af vejen der scrolles i fuld bredde og gentages ved kanten af skærmen
     vejOffset -= vejSpeed;
     vejBilleder.forEach((img, i) => {
       img.style.transform = `translateX(${vejOffset + i * window.innerWidth}px)`;
@@ -48,7 +51,7 @@ const vejBilleder = document.querySelectorAll(".vej");
 
 requestAnimationFrame(animateScroll);
 
-// Bil-vugge animation
+// Bil animation der vugger frem og tilbage
 let angle = 0;
 function animateBil() {
   angle += 0.01;
@@ -58,7 +61,7 @@ function animateBil() {
 }
 animateBil();
 
-// Gå til forside.html ved klik
+// Går til forside.html ved klik hvor som helst på skærmen
 document.getElementById("pauseskærm").addEventListener("click", function () {
   window.location.href = "forside.html";
 });
