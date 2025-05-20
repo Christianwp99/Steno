@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nextButton.style.position = "relative";
       nextButton.style.top = "-10rem";    // Flytter knappen op
       nextButton.style.left = "37rem";    // Flytter knappen til højre
+      nextButton.style.color = "white"; // hvid farve
       nextButton.addEventListener("click", () => {
         // Naviger til slutside
         window.location.href = "quizslut.html";
@@ -98,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nextButton.style.position = "relative";
       nextButton.style.top = "-10rem";    // Flytter knappen op
       nextButton.style.left = "37rem";    // Flytter knappen til højre
+      nextButton.style.color = "white"; // hvid farve
       nextButton.addEventListener("click", () => {
         currentQuestion++; // Gå videre til næste spørgsmål
         loadQuestion(currentQuestion); // Indlæs næste spørgsmål
