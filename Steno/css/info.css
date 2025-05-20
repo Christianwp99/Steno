@@ -121,7 +121,7 @@
         display: flex;
       }
 
-      .back h1{
+      .back h2{
         font-size: 1.2rem;
         text-align: left;
       }
@@ -191,6 +191,7 @@
         cursor: pointer;
         position: relative;
         text-decoration: underline;
+        font-size: 1.5rem;
       }
       
       .graf.rotating {

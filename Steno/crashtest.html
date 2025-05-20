@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crashtest</title>
-    <link rel="stylesheet" href="css/crashtest.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crashtest</title>
+  <link rel="stylesheet" href="css/crashtest.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img src="billeder/road.webp" alt="" class="road">
-    <header>
-        <div class="vertical-text">CRASHTEST</div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <video id="videoPlayer" controls poster="billeder/crash.png">
-              <source src="video/animatic.mp4" type="video/mp4">
-            </video>
-        
-            <div class="button-group">
-              <div class="left-buttons">
-                <button onclick="playVideo('animaticmand.mp4')" class="button">Mand</button>
-                <button onclick="playVideo('animatic.mp4')" class="button">Kvinde</button>
-              </div>
-              <button onclick="replayVideo()" class="button replay">Afspil igen</button>
-            </div>
-        </div>
-    </main>
 
-    <footer>
-        <section class="bottom-icons">
-            <button class="icon-button">
-              <img src="billeder/hjem.webp" alt="Hjem ikon" onclick="location.href='forside.html'">
-            </button>
-            <button class="icon-button">
-              <img src="billeder/lyd.webp" alt="Lyd ikon">
-            </button>
-            <button class="icon-button">
-              <img src="billeder/dansk.webp" alt="Dansk ikon">
-            </button>
-        </section>
-    </footer>
-    <script src="js/crashtest.js"></script>
+  <img src="billeder/road.webp" alt="" class="road">
+
+  <header>
+    <div class="vertical-text">CRASHTEST</div>
+  </header>
+
+  <main>
+    <section class="container">
+      <figure>
+        <video id="videoPlayer" controls poster="billeder/crash.png">
+          <source src="video/animatic.mp4" type="video/mp4">
+          Din browser understøtter ikke videoafspilning.
+        </video>
+        <figcaption>Video af crashtest – vælg køn og afspil igen</figcaption>
+      </figure>
+
+      <div class="button-group">
+        <div class="left-buttons">
+          <button type="button" onclick="playVideo('animaticmand.mp4')" class="button">Mand</button>
+          <button type="button" onclick="playVideo('animatic.mp4')" class="button">Kvinde</button>
+        </div>
+        <button type="button" onclick="replayVideo()" class="button replay">Afspil igen</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="bottom-icons">
+      <button type="button" class="icon-button" onclick="location.href='forside.html'">
+        <img src="billeder/hjem.webp" alt="Hjem ikon">
+      </button>
+      <button type="button" class="icon-button">
+        <img src="billeder/lyd.webp" alt="Lyd ikon">
+      </button>
+      <button type="button" class="icon-button">
+        <img src="billeder/dansk.webp" alt="Dansk ikon">
+      </button>
+    </section>
+  </footer>
+
+  <script src="js/crashtest.js"></script>
 </body>
 </html>
