@@ -9,7 +9,7 @@
 }
 /*Kort med afslutningsgrafik og tekst dertil*/
 .slut-card {
-  background-image: url(../billeder/bilerslut.png);
+  background-image: url(../billeder/bilerslut.webp);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: right top;
