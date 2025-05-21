@@ -57,7 +57,7 @@
 }
 /*placerer bilen så den står ved slutningen af progressbaren på slutskærmen*/
 .bil {
-  margin-left: 34.5rem;
+  transform: translateX(300%);
 }
 
 }
