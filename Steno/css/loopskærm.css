@@ -1,5 +1,5 @@
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
-/* Fjern scroll */
+/* Fjerner scroll */
 body, html {
   margin: 0;
   padding: 0;
@@ -7,15 +7,14 @@ body, html {
   height: 100%;
 }
 
-/* Baggrund */
+/* Styler main generelt */
 #pauseskærm {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   background-color: #000;
 }
 
-/* Fælles for alle lag */
+/* Generel styling af lag class - alt undtagen vejen */
 .lag {
   width: 100%;
   height: auto;
@@ -24,6 +23,7 @@ body, html {
   position: absolute;
 }
 
+/* Justerer størrelse og placering af billederne */
 .himmel {
     width: 675%;
 }
@@ -32,23 +32,18 @@ body, html {
     top: 350px;
 }
 
+.græs2 {
+    top: 826px;
+}
+
 .træ {
     width: 475%;
     top: 360px;
 }
 
-.vej-wrapper {
-  position: absolute;
-  top: 548px; /* samme top som din vej */
-  left: 0;
-  display: flex;
-  width: max-content;
-  height: 200px;
-}
-
-.vej {
-  width: 22768px; /* eller en anden bredde der passer præcist til skærmen */
-  height: 280px;
+.busk {
+    width: 400%;
+    top: 870px;
 }
 
 .bil {
@@ -57,23 +52,30 @@ body, html {
     left: 690px;
 }
 
-.græs2 {
-    top: 826px;
+/* Specifik justering til containeren med vejen */
+.vej-wrapper {
+  position: absolute;
+  top: 548px;
+  left: 0;
+  display: flex;
+  width: max-content;
+  height: 200px;
 }
 
-.busk {
-    width: 400%;
-    top: 870px;
+.vej {
+  width: 22768px;
+  height: 280px;
 }
 
+/* Styling af tekst i midten af skærmen */
 .tekst {
   position: absolute;
   top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* eller en kontrastfarve, så teksten er synlig */
-  font-size: 4rem; /* tilpas størrelsen efter behov */
-  z-index: 1000; /* sikre den vises øverst */
+  color: white;
+  font-size: 4rem; 
+  z-index: 1000; 
   text-align: center;
 }
 }
