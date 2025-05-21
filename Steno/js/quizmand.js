@@ -1,7 +1,10 @@
+// Venter på hele HTML er indlæst før script kører
 document.addEventListener("DOMContentLoaded", () => {
+// Scriptet henter html-elementet med klassen "questionbox" - det er altså her at spørgsmålet vises
   const questionBox = document.querySelector(".question-box");
+// Finder containeren hvor svar-knapper skal placeres
   const answerContainer = document.querySelector(".answer-buttons");
-
+// Her starter listen med spørgsmål, svarmuligheder, det korrekte svar og tilhørende feedback indeni:
   const quizData = [
     {
       question: "Mænd udgør ca. 70% af alle trafikdræbte i Danmark. Hvorfor tror du, det er sådan?",
