@@ -42,14 +42,14 @@ h1 {
 }
 /*Kvindekort*/
 .card1 {
-  background-image: url(/Steno/billeder/kvindekon.png);
+  background-image: url(../billeder/kvindekon.webp);
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
   /*Mandekort*/
   .card2{
-    background-image: url(/Steno/billeder/mandekon.png);
+    background-image: url(../billeder/mandekon.webp);
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: center;

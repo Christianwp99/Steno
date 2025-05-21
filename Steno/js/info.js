@@ -29,7 +29,7 @@ document.getElementById("graf").addEventListener("click", function () {
   setTimeout(() => {
     if (erAktiv) {
       // Hvis aktiv: vis billede
-      graf.innerHTML = '<img src="../Steno/billeder/graf.webp" alt="graf">';
+      graf.innerHTML = '<img src="/billeder/graf.webp" alt="graf">';
     } else {
       // Hvis ikke aktiv: vis tekst igen
       graf.innerHTML = '<h1>Klik her</h1>';
