@@ -50,23 +50,20 @@
         height: auto;
     }
     /* Styling af tekst site-tekst til alle sider */
-    .vertical-text {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-size: 1.8rem;
-        color: #a0a0a0;
-        font-weight: bold;
-        position: fixed;
-        left: 0;
-        top: 2%;
-        transform: translateY(-50%);
-        letter-spacing: 0.2em;
-        padding: 1rem;
-        writing-mode: vertical-rl; 
-        transform: rotate(180deg);
-        opacity: 75%;
-        margin-left: 1.5rem;
-      }
+    .vertical-text {     
+      font-size: 1.8rem;              
+      color: #a0a0a0;              
+      font-weight: bold;              
+      position: fixed;                
+      left: 0;                        
+      top: 2%;                      
+      letter-spacing: 0.2em;          
+      padding: 1rem;                  
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);      
+      opacity: 75%;                   
+      margin-left: 1.5rem;          
+  }
     /* Styling af de 3 knapper i bunden */
     .bottom-icons {
         position: fixed;
