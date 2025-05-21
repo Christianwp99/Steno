@@ -5,22 +5,24 @@
     --blaa: #003d85;
     --rod: #ca020c;
 }
+/* Implementering af de fonte vi bruger */
 @font-face {
   font-family:'Passata';
-  src: url(../fonts/AUPassata_Bold.ttf) format('truetype'); /* eller .otf, .woff osv. */
+  src: url(../fonts/AUPassata_Bold.ttf) format('truetype'); 
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family:'PassataRg';
-  src: url(../fonts/AUPassata_Rg.ttf) format('truetype'); /* eller .otf, .woff osv. */
+  src: url(../fonts/AUPassata_Rg.ttf) format('truetype'); 
   font-weight: normal;
   font-style: normal;
 }
 
+/* Styling til iPad pro */
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
-  
+    /* Generel styling af body til alle sider */
     body {
         font-family: 'Passata', sans-serif;
         background-color: var(--grå);
@@ -32,11 +34,13 @@
         width: 100%;    
         box-sizing: border-box;
     }
+    /* Styling af baggrundsbilledet til alle sider */
     .road {
         max-width: 100%;
         position: absolute;
         z-index: -1;
     }
+    /* Styling af logo på forside */
     .logo {
         position: absolute;
         top: 4%; 
@@ -45,6 +49,7 @@
         max-width: 175px; 
         height: auto;
     }
+    /* Styling af tekst site-tekst til alle sider */
     .vertical-text {
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -62,7 +67,7 @@
         opacity: 75%;
         margin-left: 1.5rem;
       }
-    
+    /* Styling af de 3 knapper i bunden */
     .bottom-icons {
         position: fixed;
         bottom: 20px;
@@ -94,12 +99,13 @@
         object-fit: contain;
       }
 
+      /* Styling af de 3 navigationsmuligheder der er på forsiden */
       .container {
         display: flex;
         gap: 4rem;
-        justify-content: center; /* Centrerer indholdet horisontalt */
-        align-items: center; /* Centrerer indholdet vertikalt */
-        height: 100vh; /* Gør containeren højde lig med hele vinduets højde */
+        justify-content: center;
+        align-items: center; 
+        height: 100vh; 
       }
 
       .container p{
@@ -135,12 +141,11 @@
         padding: 1rem;
       }
       
-      /* Farver som i dit billede */
       .crash {
         background-color: var(--rod);
         background-image: url(../billeder/crash.webp);
         background-size: 75%;
-        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-repeat: no-repeat; 
         background-position-x: center;
         background-position-y: 35%;
       }
@@ -149,7 +154,7 @@
         background-color: var(--orange);
         background-image: url(../billeder/pære.webp);
         background-size: 75%;
-        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: 60%;
       }
@@ -158,7 +163,7 @@
         background-color: var(--blaa);
         background-image: url(../billeder/sporg.webp);
         background-size: 45%;
-        background-repeat: no-repeat; /* Forhindrer billedet i at gentage sig */
+        background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
       }
