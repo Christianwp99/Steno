@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     allButtons.forEach(b => b.disabled = true);
 
     if (button.textContent.trim() === correctAnswer.trim()) {
-      button.style.backgroundColor = "#006b3c"; // grøn
+      button.style.backgroundColor = "#006b3c"; 
     } else {
-      button.style.backgroundColor = "#b31919"; // rød
+      button.style.backgroundColor = "#b31919";
     }
 
     setTimeout(() => {
