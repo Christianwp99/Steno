@@ -1,10 +1,12 @@
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+      /* Generel styling af indholdet på siden */
       .container {
         text-align: center;
         display: flex;
         flex-direction: column;
       }
       
+      /* Udelukkende styling til video afspilleren */
       video {
         width: 90vw;
         max-width: 1200px;
@@ -13,11 +15,12 @@
         margin-top: 250px;
       }
       
+      /* Styling af de forskellige knapper */
       .button-group {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%; /* eller max-width fx 1200px */
+        width: 90%;
         max-width: 1200px;
         margin-bottom: 25%;
       }
