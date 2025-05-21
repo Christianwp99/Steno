@@ -50,15 +50,21 @@ document.addEventListener("DOMContentLoaded", () => {
 // Starter altid fra det første spørgsmål, som har indeks 0.
   let currentQuestion = 0;
 
+ // Funktion der indlæser og viser et spørgsmål ud fra dets placering i quizzen
   function loadQuestion(index) {
-     // Funktion der indlæser og viser et spørgsmål ud fra dets placering i quizzen
+
+     // Vi gemmer spørgsmålet i variablen 'q' for nem adgang.
     const q = quizData[index];
-    // Vi gemmer spørgsmålet i variablen 'q' for nem adgang.
+
+     // Her sætter vi teksten i det område, hvor spørgsmålet skal vises, til selve spørgsmålet.
     questionBox.textContent = q.question;
-    // Her sætter vi teksten i det område, hvor spørgsmålet skal vises, til selve spørgsmålet.
+
+    // størrelse på skrift
     questionBox.style.fontSize = "2rem";
+    
     // Vi rydder tidligere svarmuligheder ud, så vi kan tilføje nye svar for det aktuelle spørgsmål.
     answerContainer.innerHTML = "";
+
     questionBox.style.height = "10rem";   // Gør højden standard
     
 
