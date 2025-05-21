@@ -7,7 +7,7 @@
 .container {
   text-align: center;
 }
-
+/*Styling af overskriften samt en blå baggrund og en smule runding på hjørnerne*/
 h1 {
   background-color: var(--blaa);
   color: white;
@@ -18,14 +18,14 @@ h1 {
   text-align: center;
   margin: 0 auto;
 }
-
+/*Containeren til kortene - flexbox for præcis styling samt centrering*/
 .cards {
   display: flex;
   justify-content: center;
   gap: 100px; /* afstand mellem kortene */
   margin-top: 40px;
 }
-
+/*Lidt mere generel styling på kortene*/
 .card1, .card2 {
   background-color: var(--green);
   width: 300px;
@@ -40,33 +40,33 @@ h1 {
   transition: transform 0.2s;
   position: relative;
 }
+/*Kvindekort*/
 .card1 {
   background-image: url(/Steno/billeder/kvindekon.png);
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
-  
+  /*Mandekort*/
   .card2{
     background-image: url(/Steno/billeder/mandekon.png);
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: center;
 }
-
+/*En wrapper omkring kortet og label - her samler vi en én kolonne*/
 .card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+/*Teksten under hvert kort*/
 .card-label {
   margin-top: 12px;
   font-size: 20px;
   font-weight: bold;
 }
-
-
+/*Container til quiz - centrer alt både vandret og lodret, og fylder hele skærmen vha. height*/
 .quizcontainer {
   display: flex;
   flex-direction: column;

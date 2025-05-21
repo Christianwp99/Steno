@@ -5,21 +5,21 @@
 }
 
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
-.progress-wrapper {
+/*Wrapper til progressbaren og bilen*/.progress-wrapper {
   width: 60%;
   margin: 0px auto 0 auto;
   position: relative;
   z-index: 1;
   gap: 3rem;
 }
-
+/*selve baren i toppen*/
 .progressbar {
   margin-top: 5rem;
   width: 100%;
   height: auto;
   display: block;
 }
-
+/*bilen, der bevæger sig langs progress*/
 .bil {
   width: 25%;
   height: auto;
@@ -40,7 +40,7 @@
   padding-top: 80px;
   padding-bottom: 100px;
 }
-
+/*Spørgsmål*/
 .question-box {
   background-color: var(--blaa);
   padding: 20px 30px;
@@ -54,7 +54,7 @@
   align-content: center;
 }
 
-
+/*Grid-layout til svar-knapper*/
 .answer-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -62,7 +62,7 @@
   justify-items: center;
   margin: 5rem;
 }
-
+/*Og selve svarene her*/
 .answer {
   background-color: var(--orange);
   color: white;
@@ -75,7 +75,7 @@
   height: 10rem;
   text-align: center;
 }
-
+/*Næste-knappen som vises efter valgt svar*/
 .next-button {
   background-color: var(--orange);
   border: none;
@@ -89,24 +89,24 @@
   align-items: center;
   font-size: 3rem;
 }
-
+/*Content der viser sig ved slut*/
 .quiz-end-content {
   text-align: center;
   margin-top: 2rem;
 }
-
+/*Billede slut*/
 .quiz-slut-billede {
   max-width: 100%;
   height: auto;
 }
-
+/*Teksten under slutbillede*/
 .quiz-afslut-tekst {
   font-size: 1.6rem;
   margin: 1rem 0;
   color: #333;
   font-weight: 500;
 }
-
+/*Ikon, der leder bruger tilbage til start vha href*/
 .uvending-billede {
   width: 80px;
   margin-top: 1rem;

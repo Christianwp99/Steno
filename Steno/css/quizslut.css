@@ -1,12 +1,13 @@
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
-.quiz-slut {
+/*Container for slutsektion af quiz*/
+  .quiz-slut {
   padding: 5rem 1rem;
   text-align: left;
   align-items: center;
   justify-content: center;
   display: flex;
 }
-
+/*Kort med afslutningsgrafik og tekst dertil*/
 .slut-card {
   background-image: url(../billeder/bilerslut.png);
   background-size: 50%;
@@ -20,7 +21,7 @@
   height: 32rem;
   justify-content: center;
 }
-
+/*Billede i slutkort*/
 .slut-billede {
   max-width: 100%;
   height: 20rem;
@@ -28,7 +29,7 @@
   margin-bottom: 1.5rem;
   object-fit: contain;
 }
-
+/*Tekst..*/
 .slut-tekst {
   margin-top: 2rem;
   font-family: 'PassataRg', sans-serif;
@@ -36,24 +37,24 @@
   line-height: 1.6;
    color: white;
 }
-
+/*Ikon, der tillader bruger at vende tilbage ved endt quiz*/
 .uvending{
   justify-content: center;
   align-items: center;
   display: flex;
   margin-top: 4rem;
 }
-
+/*lidt mere styling*/
 .uvending-link img {
   width: 7rem;
   height: auto;
   transition: transform 0.3s ease;
 }
-
+/*lidt hover der forstørrer*/
 .uvending-link img:hover {
   transform: scale(1.1) rotate(-8deg);
 }
-
+/*placerer bilen så den står ved slutningen af progressbaren på slutskærmen*/
 .bil {
   margin-left: 34.5rem;
 }
