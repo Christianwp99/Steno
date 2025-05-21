@@ -46,36 +46,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
+// Variablen 'currentQuestion' - Holder styr på hvilken spørgsmål der vises lige nu
+// Starter altid fra det første spørgsmål, som har indeks 0.
   let currentQuestion = 0;
 
   function loadQuestion(index) {
+     // Funktion der indlæser og viser et spørgsmål ud fra dets placering i quizzen
     const q = quizData[index];
+    // Vi gemmer spørgsmålet i variablen 'q' for nem adgang.
     questionBox.textContent = q.question;
+    // Her sætter vi teksten i det område, hvor spørgsmålet skal vises, til selve spørgsmålet.
     questionBox.style.fontSize = "2rem";
+    // Vi rydder tidligere svarmuligheder ud, så vi kan tilføje nye svar for det aktuelle spørgsmål.
     answerContainer.innerHTML = "";
     questionBox.style.height = "10rem";   // Gør højden standard
     
 
     q.answers.forEach(answerText => {
+      // For hvert svarmulighed i spørgsmålet:
+      // opretter en ny knap for hvert svar
       const btn = document.createElement("button");
+
       btn.textContent = answerText;
+      // Vi sætter knapteksten til at være det enkelte svar
+
       btn.classList.add("answer");
+        // Giver knappen en klasse, så den kan styles
+
       btn.addEventListener("click", () => handleAnswer(btn, q.correct, q.feedback));
+       // Når brugeren klikker på knappen, tjekkes svaret
+
       answerContainer.appendChild(btn);
+       // Tilføjer knappen til siden
     });
   }
 
+// håndterer hvad der sker, når brugeren klikker på et svar.
   function handleAnswer(button, correctAnswer, feedbackText) {
-    const allButtons = document.querySelectorAll(".answer");
-    allButtons.forEach(b => b.disabled = true);
 
+    const allButtons = document.querySelectorAll(".answer");
+    // Vi finder alle svar-knapper på siden.
+
+    allButtons.forEach(b => b.disabled = true);
+    // Vi gør alle svar-knapper umulige at klikke på efter ét svar for at forhindre flere klik
+
+// Hvis teksten på den klikkede knap matcher det korrekte svar (vi bruger trim() for at fjerne ekstra mellemrum)
     if (button.textContent.trim() === correctAnswer.trim()) {
+
+  // Så markerer vi knappen med en grøn farve som tegn på korrekt svar
       button.style.backgroundColor = "#006b3c"; 
+  
     } else {
+      // Hvis svaret er forkert, markerer vi knappen med en rød farve
       button.style.backgroundColor = "#b31919"; 
+     
     }
 
     setTimeout(() => {
+      // Efter 1 sekund viser vi feedback til brugeren, fx forklaring eller kommentarer til svaret
       showFeedback(feedbackText);
     }, 1000);
   }
