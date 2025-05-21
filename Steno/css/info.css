@@ -6,8 +6,10 @@
     --rod: #ca020c;
 }
 
+/* Gør det til Ipad størelse */
 @media screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
    
+/*Styling af øverste box*/
     .top-box {
         background-color: #D9D9D9;
         padding: 1rem; 
@@ -20,19 +22,22 @@
 
       }
 
+/*Styling af overskriften i øverste box */
       .top-box h1 {
         font-size: 2rem;
         color: #1a1a1a;
         margin: 0;
         font-weight: bold;
       }
-      
+     
+/*Styling af brødtekst i øverste box */  
       .top-box p {
         font-family: 'PassataRg', sans-serif;
         font-size: 2rem;
         color: #333;
       }
-      
+  
+/* Styloing af containeren med de 4 kort */
       .infocontainer {
         display: flex;
         justify-content: center;
@@ -41,7 +46,7 @@
         margin-top: 2rem;
      
       }
-      
+/* Styling af kortene */   
       .info-kort {
         width: 10rem;
         height: 15rem;
@@ -63,31 +68,34 @@
       }
       
   
-      
+      /* Det blå kort */   
       .blaa {
         background-color: #003f8a;
         box-shadow: -0.5rem 0 rgba(0, 63, 138, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
 
       
-      
+      /* Det grå kort */   
       .graa {
         background-color: #D9D9D9;
         color: #1a1a1a;
         box-shadow: -0.5rem 0 rgba(217, 217, 217, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
       
+      /* Det orange kort */
       .orange {
         background-color: #d87b1e;
         box-shadow: -0.5rem 0 rgba(216, 123, 30, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
       }
-      
+
+      /* Det grønne kort */
       .gron {
         background-color: #1c5031;
         box-shadow: -0.5rem 0 rgba(28, 80, 49, 0.5); /* 50% gennemsigtighed på den ovenstående farve */
         padding-right: 1.5rem;
       }
       
+
       .flip-container {
         width: 10rem;
         height: 15rem;
@@ -111,10 +119,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        backface-visibility: hidden;
-        
+        backface-visibility: hidden; /* Skjul elementets anden side, når det vendes */
       }
       
+      /* Styling af bagsiden */
       .back {
         transform: rotateY(180deg);
         background-image: none; /* Ingen hånd på bagsiden */
@@ -157,7 +165,7 @@
         height: 3rem;
       }
 
-
+      /* Styling af nederste tekstbox og grafen */
       .infocontainer2{
         display: flex;
         justify-content: center;
@@ -166,6 +174,7 @@
         color: black;
       }
 
+      /* Styling af nederste tekstbox */
       .box{
         font-size: 1.2rem;
         background-color: #D9D9D9;
@@ -179,6 +188,7 @@
         padding-right: 2rem;
       }
 
+      /* Styling af nederste grafen */
       .graf {
         width: 12rem;
         height: 12rem;
@@ -194,10 +204,12 @@
         font-size: 1.5rem;
       }
       
+      /* Grafens rotations animation */
       .graf.rotating {
         animation: rotate 1s ease forwards; /* Animationen varer 1 sekund */
       }
       
+      /* Grafens rotations animation */
       @keyframes rotate {
         0% {
           transform: rotate(0deg); /* Start rotation fra 0 grader */
@@ -207,6 +219,7 @@
         }
       }
       
+      /* Når grafen rotere bliver det til et billede af grafen, her er billedets styling */
       .graf img {
         width: 100%; /* Billedet fylder hele bredden af containeren */
         height: 100%; /* Billedet fylder hele højden af containeren */
