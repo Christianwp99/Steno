@@ -76,4 +76,12 @@ h1 {
   height: 100vh;
 }
 
+.quizcontainer h1 {
+  font-size: 2rem;
+}
+
+.quizcontainer p {
+  font-size: 2rem;
+}
+
 }
